@@ -1,0 +1,22 @@
+{
+    "name": "tumult-hype-snippets",
+    "displayName": "Tumult Hype Code Snippets",
+    "description": "Code snippets for Tumult Hype development.",
+    "version": "1.0",
+    "publisher": "themorgantown",
+	"icon": "images/hype.png",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

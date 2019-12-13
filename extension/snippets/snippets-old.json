@@ -1,0 +1,44 @@
+{
+	"from": {
+		"prefix": "from",
+		"body": "from(${1:elem},  ${2:1}, {${3:vars}}${4})",
+		"description": "Create from tween.",
+		"scope": ""
+	},
+	"fromTo": {
+		"prefix": "fromTo",
+		"body": "fromTo(${1:elem}, ${2:1}, {${4:fromVars}}, {${5:toVars}}${6})",
+		"description": "Create fromTo tween.",
+		"scope": ""
+	},
+	"set": {
+		"prefix": "set",
+		"body": "set(${1:elem}, {${2:vars}}$3)",
+		"description": "Create set tween.",
+		"scope": ""
+	},
+	"stagger": {
+		"prefix": "stagger",
+		"body": "stagger${1:To}(${2:elem}, ${3:1}, {${4:vars}}, ${5:0})",
+		"description": "Create stagger tween.",
+		"scope": ""
+	},
+	"staggerFromTo": {
+		"prefix": "staggerFromTo",
+		"body": "staggerFromTo(${1:elem}, ${2:1}, {${4:fromVars}}, {${5:toVars}}, ${6:0})",
+		"description": "Create staggerFromTo tween.",
+		"scope": ""
+	},
+	"to": {
+		"prefix": "to",
+		"body": "to(${1:elem}, ${2:1}, {${3:vars}}${4})",
+		"description": "Create to tween.",
+		"scope": ""
+	},
+	"Tween": {
+		"prefix": "Tween",
+		"body": "Tween${1:Lite}.${2:to}(${3:elem}, ${4:1}, {${5:vars}});",
+		"description": "Create TweenMax or Lite.",
+		"scope": ""
+	}
+}

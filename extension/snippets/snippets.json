@@ -1,0 +1,14 @@
+{
+	"from": {
+		"prefix": "resourcesFolderName",
+		"body": "${resourcesFolderName}",
+		"description": "Resources Folder Name.",
+		"scope": ""
+    },
+    "documentName": {
+		"prefix": "documentname",
+		"body": "hypeDocument.documentName(${1:elem})",
+		"description": "Document Name",
+		"scope": ""
+    }
+}
