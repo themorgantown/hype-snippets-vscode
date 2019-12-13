@@ -2,7 +2,7 @@
     "name": "tumult-hype-snippets",
     "displayName": "Tumult Hype Code Snippets",
     "description": "Code snippets for Tumult Hype development.",
-    "version": "1.0",
+    "version": "1.0.0",
     "publisher": "themorgantown",
 	"icon": "images/hype.png",
     "engines": {

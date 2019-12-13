@@ -10,5 +10,11 @@
 		"body": "hypeDocument.documentName(${1:elem})",
 		"description": "Document Name",
 		"scope": ""
-    }
+	}, 
+	"shownextscene": {
+		"prefix": "shownextscene",
+		"body": "hypeDocument.showNextScene(${1|hypeDocument.kSceneTransitionInstant,hypeDocument.kSceneTransitionCrossfade,hypeDocument.kSceneTransitionSwap,hypeDocument.kSceneTransitionPushLeftToRight,hypeDocument.kSceneTransitionPushRightToLeft,hypeDocument.kSceneTransitionPushBottomToTop,hypeDocument.kSceneTransitionPushTopToBottom|}, ${2:1.1})",
+		"description": "Show Next Scene.",
+		"scope": ""
+	}
 }

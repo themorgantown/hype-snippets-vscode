@@ -1,4 +1,4 @@
-# GSAP Code Snippets README
+# Tumult Hype Code Snippets README
 
 This extension makes it easier to work on Hype JavaScript API functions in VScode. Learn more about [Tumult Hype here](https://tumult.com/hype/). View all JavaScript API functions on [this page](https://tumult.com/hype/documentation/#javascript).
 
@@ -19,7 +19,7 @@ Below is a list of all available snippets and the triggers of each one. The → 
 
 ## Release Notes
 
-### 1.0
+### 1.0.0
 
 Initial release 
 
