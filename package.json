@@ -2,8 +2,8 @@
     "name": "tumult-hype-snippets",
     "displayName": "Tumult Hype Code Snippets",
     "description": "Helpful snippets for Tumult Hype JavaScript API functions.",
-    "version": "1.0.0",
-    "publisher": "themorgantown",
+    "version": "1.0.1",
+    "publisher": "tumult",
 	"icon": "images/hype.png",
     "engines": {
         "vscode": "^1.5.0"

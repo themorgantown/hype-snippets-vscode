@@ -221,49 +221,49 @@
 		"description": "Continues the specified timeline where it left off for the symbol. Note: timelines are user-defined, so they are not enforced to be unique. If you are going to use this function, be sure that no two timelines in the symbol have the same name! Direction to play timeline: hypeDocument.kDirectionForward hypeDocument.kDirectionReverse",
 		"scope": ""
 	},
-	{
+	"symbolInstance.goToTimeInTimelineNamed(timeInSeconds, timelineName)": {
 		"prefix": "symbolInstance.goToTimeInTimelineNamed(timeInSeconds, timelineName)",
 		"body": "symbolInstance.goToTimeInTimelineNamed(${1:timeInSeconds}, '${1:timelineName}')",
 		"description": "Jumps to a specific time in the specified timeline for the symbol. Note: timelines are user-defined, so they are not enforced to be unique. If you are going to use this function, be sure that no two timelines in the symbol have the same name!",
 		"scope": ""
 	},
-	{
+	"symbolInstance.currentTimeInTimelineNamed(timelineName)": {
 		"prefix": "symbolInstance.currentTimeInTimelineNamed(timelineName)",
 		"body": "symbolInstance.currentTimeInTimelineNamed($'{1:timelineName}')",
 		"description": "Returns the current time of the specified timeline in seconds.",
 		"scope": ""
 	},
-	{
+	"symbolInstance.durationForTimelineNamed(timelineName)": {
 		"prefix": "symbolInstance.durationForTimelineNamed(timelineName)",
 		"body": "symbolInstance.durationForTimelineNamed($'{1:timelineName}')",
 		"description": "Returns the duration of the specified timeline in seconds.",
 		"scope": ""
 	},
-	{
+	"symbolInstance.currentDirectionForTimelineNamed(timelineName)": {
 		"prefix": "symbolInstance.currentDirectionForTimelineNamed(timelineName)",
 		"body": "symbolInstance.currentDirectionForTimelineNamed($'{1:timelineName}')",
 		"description": "Returns the playback direction of the specified timeline.  hypeDocument.kDirectionForward hypeDocument.kDirectionReverse",
 		"scope": ""
 	},
-	{
+	"symbolInstance.isPlayingTimelineNamed(timelineName)": {
 		"prefix": "symbolInstance.isPlayingTimelineNamed(timelineName)",
 		"body": "symbolInstance.isPlayingTimelineNamed$'{1:timelineName}'",
 		"description": "Returns true if the timeline is playing and false if it is not.",
 		"scope": ""
 	},
-	{
+	"event['hypeGesturePhase']": {
 		"prefix": "event['hypeGesturePhase']",
 		"body": "event['hypeGesturePhase']",
 		"description": "When receiving a callback for the On Drag event with the Run JavaScript… action the event object also offers information about whether the current drag gesture has just started or ended, was canceled, or the coordinates were updated. To get that state, access the hypeGesturePhase property in the event object: hypeDocument.kHypeGesturePhaseStart hypeDocument.kHypeGesturePhaseMove hypeDocument.kHypeGesturePhaseEnd hypeDocument.kHypeGesturePhaseCancel",
 		"scope": ""
 	},
-	{
+	"event['hypeGestureXPosition']": {
 		"prefix": "event['hypeGestureXPosition']",
 		"body": "event['hypeGestureXPosition']",
 		"description": "Returns the current x position of a drag when using the 'On Drag' event with the 'Run JavaScript…' action. Using the X and Y position events above allows you to create draggable elements constrained within a defined area.",
 		"scope": ""
 	},
-	{
+	"event['hypeGestureYPosition']": {
 		"prefix": "event['hypeGestureYPosition']",
 		"body": "event['hypeGestureYPosition']",
 		"description": "Returns the current y position of a drag when using the 'On Drag' event with the 'Run JavaScript…' action. Using the X and Y position events above allows you to create draggable elements constrained within a defined area.",
