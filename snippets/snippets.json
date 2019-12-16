@@ -1,0 +1,271 @@
+{
+	"resourcesFolderName": {
+		"prefix": "${resourcesFolderName",
+		"body": "${resourcesFolderName}",
+		"description": "Resources Folder Name.",
+		"scope": ""
+	},
+	"hypeDocument.documentName": {
+		"prefix": "documentname",
+		"body": "hypeDocument.documentName(${1:elem})",
+		"description": "Hype Document Name",
+		"scope": ""
+	},
+	"HYPE.documents[documentName]": {
+		"prefix": "HYPE.documents[documentName]",
+		"body": "HYPE.documents[documentName]",
+		"description": "To access the Tumult Hype API from a JavaScript outside of the embedded document, you can use the global Tumult Hype object.",
+		"scope": ""
+	},
+	"HYPE_eventListeners": {
+		"prefix": "HYPE_eventListeners",
+		"body": "HYPE_eventListeners",
+		"description": "",
+		"scope": ""
+	},
+	"hypeDocument.documentId": {
+		"prefix": "documentId",
+		"body": "hypeDocument.documentId(${1:elem})",
+		"description": "Document Id",
+		"scope": ""
+	},
+	"hypeDocument.resourcesFolderURL": {
+		"prefix": "resourcesFolderURL",
+		"body": "hypeDocument.resourcesFolderURL()",
+		"description": "The path to the Hype Resources Folder",
+		"scope": ""
+	},
+	"hypeDocument.functions": {
+		"prefix": "hypeDocument.functions",
+		"body": "hypeDocument.functions()",
+		"description": "Returns an array of all user-defined JavaScript functions in the Tumult Hype Document.",
+		"scope": ""
+	},
+	"hypeDocument.getElementById": {
+		"prefix": "hypeDocument.getElementById",
+		"body": "hypeDocument.getElementById(${1:elem})",
+		"description": "Searches the current document for the specified id (entered through the Identity inspector’s 'Unique Element ID') and returns the DOM HTML Element. This is similar to the typical document.getElementById, however the API version should be used instead as Tumult Hype may reassign ids in cases of collision.",
+		"scope": ""
+	},
+	"hypeDocument.customData": {
+		"prefix": "customData",
+		"body": "hypeDocument.customData(${1:elem})",
+		"description": "An object to put any user-defined data associated with the Tumult Hype Document.",
+		"scope": ""
+	},
+	"hypeDocument.getElementProperty(element, propertyName)": {
+		"prefix": "hypeDocument.getElementProperty",
+		"body": "hypeDocument.getElementProperty(${1:elem}, ${2:elem})",
+		"description": "Gets a property of an element based on the Hype runtime's knowledge. The element argument must be a DOM element, generally obtained by the hypeDocument.getElementById() function. Valid property names (quotes required): 'top''left''width''height''rotateZ''scaleX''scaleY''opacity' 'z-index' Physics property names (Hype Professional): 'physics-engine' - a Matter.js (http://brm.io/matter-js) Engine object 'physics-body' - a Matter.js (http://brm.io/matter-js) Body object 'physics-bounce' 'physics-friction''physics-air-drag''physics-density''physics-body-type' - Can be hypeDocument.kPhysicsBodyTypeDead, hypeDocument.kPhysicsBodyTypeStatic, or hypeDocument.kPhysicsBodyTypeDynamic ",
+		"scope": ""
+	},
+	"hypeDocument.setElementProperty(element, propertyName)": {
+		"prefix": "hypeDocument.setElementProperty",
+		"body": "hypeDocument.setElementProperty(${1:elem}, ${2:elem})",
+		"description": "Sets a property of an element in a manner compatible with the Hype runtime. If the optionalDuration is provided, it will perform a transition animation from the current value to the specified value over the specified number of seconds. The default value is 0. The element argument must be a DOM element, generally obtained by the hypeDocument.getElementById() function. Valid property names (quotes required): 'top''left''width''height''rotateZ''scaleX''scaleY''opacity' 'z-index' 'physics-bounce' 'physics-friction' 'physics-air-drag' 'physics-density' 'physics-body-type' - Can be hypeDocument.kPhysicsBodyTypeDead, hypeDocument.kPhysicsBodyTypeStatic, or hypeDocument.kPhysicsBodyTypeDynamic | optionalTimingFunction will default to‘easeinout’ if not provided. Valid timing function names include (quotes required): 'easeinout' 'easein' 'easeout' 'linear'",
+		"scope": ""
+	},
+	"hypeDocument.relayoutIfNecessary": {
+		"prefix": "hypeDocument.relayoutIfNecessary",
+		"body": "hypeDocument.relayoutIfNecessary()",
+		"description": "Explicitly tells the document to relayout all elements and groups for the current scene when using a flexible layout. Use if you have externally changed the bounding size of the main container.",
+		"scope": ""
+	},
+	"hypeDocument.triggerCustomBehaviorNamed": {
+		"prefix": "hypeDocument.triggerCustomBehaviorNamed",
+		"body": "hypeDocument.triggerCustomBehaviorNamed('${1:elem}')",
+		"description": "Insert the Custom Behavior name. Informs any elements which have a custom behavior with customBehaviorName to run its actions.",
+		"scope": ""
+	},
+	"hypeDocument.sceneNames": {
+		"prefix": "hypeDocument.sceneNames",
+		"body": "hypeDocument.sceneNames()",
+		"description": "Returns a list of all scenes in the document.",
+		"scope": ""
+	},
+	"hypeDocument.currentSceneName": {
+		"prefix": "hypeDocument.currentSceneName",
+		"body": "hypeDocument.currentSceneName()",
+		"description": "Returns the string value for the currently shown scene.",
+		"scope": ""
+	},
+	"hypeDocument.currentSceneId": {
+		"prefix": "hypeDocument.currentSceneId",
+		"body": "hypeDocument.currentSceneId()",
+		"description": "Returns the id of the container div for the current scene. This value can be used with document.getElementId() to retrieve the container element itself.",
+		"scope": ""
+	},
+	"hypeDocument.showSceneNamed": {
+		"prefix": "hypeDocument.showSceneNamed(sceneName, optionalTransition, optionalDuration)",
+		"body": "hypeDocument.showSceneNamed(${1:sceneName}, ${2|hypeDocument.kSceneTransitionInstant,hypeDocument.kSceneTransitionCrossfade,hypeDocument.kSceneTransitionSwap,hypeDocument.kSceneTransitionPushLeftToRight,hypeDocument.kSceneTransitionPushRightToLeft,hypeDocument.kSceneTransitionPushBottomToTop,hypeDocument.kSceneTransitionPushTopToBottom|}, ${3:1.1})",
+		"description": "Changes to the specified scene. If the optionalTransition is not specified it will default to the instant transition. The optionalDuration parameter is given in seconds; the default value is 1.1.",
+		"scope": ""
+	},
+	"hypeDocument.shownextscene": {
+		"prefix": "hypeDocument.showNextScene",
+		"body": "hypeDocument.showNextScene(${1|hypeDocument.kSceneTransitionInstant,hypeDocument.kSceneTransitionCrossfade,hypeDocument.kSceneTransitionSwap,hypeDocument.kSceneTransitionPushLeftToRight,hypeDocument.kSceneTransitionPushRightToLeft,hypeDocument.kSceneTransitionPushBottomToTop,hypeDocument.kSceneTransitionPushTopToBottom|}, ${2:1.1})",
+		"description": "Shows the next scene, based on the order in the scene selector interface. If the optionalTransition is not specified it will default to the instant transition.",
+		"scope": ""
+	},
+	"hypeDocument.showpreviousscene": {
+		"prefix": "hypeDocument.showPreviousScene",
+		"body": "hypeDocument.showPreviousScene(${1|hypeDocument.kSceneTransitionInstant,hypeDocument.kSceneTransitionCrossfade,hypeDocument.kSceneTransitionSwap,hypeDocument.kSceneTransitionPushLeftToRight,hypeDocument.kSceneTransitionPushRightToLeft,hypeDocument.kSceneTransitionPushBottomToTop,hypeDocument.kSceneTransitionPushTopToBottom|}, ${2:1.1})",
+		"description": "Shows the previous scene, based on the order in the scene selector interface. If the optionalTransition is not specified it will default to the instant transition.",
+		"scope": ""
+	},
+	"hypeDocument.layoutsForSceneNamed(sceneName)": {
+		"prefix": "hypeDocument.layoutsForSceneNamed(sceneName)",
+		"body": "hypeDocument.layoutsForSceneNamed('${1:sceneName}')",
+		"description": "Returns a list of layout info for the given scene. Layout info is given as an object with the following keys: 'name' 'breakpoint' 'width' 'height'.",
+		"scope": ""
+	},
+	"hypeDocument.currentLayoutName()": {
+		"prefix": "hypeDocument.currentLayoutName()",
+		"body": "hypeDocument.currentLayoutName()",
+		"description": "Returns the string value for the name of the currently shown layout.",
+		"scope": ""
+	},
+	"hypeDocument.showLayoutNamed(layoutName)": {
+		"prefix": "hypeDocument.showLayoutNamed(layoutname)",
+		"body": "hypeDocument.showLayoutNamed('${1:layoutname}')",
+		"description": "Changes instantly to the specified layout in the current scene. The layout may change back on a resize event, scene change, or relayoutIfNecessary()` call. In order to force specific layouts, use the HYPE_eventListeners infrastructure to listen to 'HypeLayoutRequest' events and return a different layout name from the callback.",
+		"scope": ""
+	},
+	"hypeDocument.startTimelineNamed('timelineName', direction)": {
+		"prefix": "hypeDocument.startTimelineNamed('timelineName', direction)",
+		"body": "hypeDocument.startTimelineNamed('${1:timelineName}', ${2|hypeDocument.kDirectionForward,hypeDocument.kDirectionReverse|})",
+		"description": "Note: this function was named hypeDocument.playTimelineNamed(timelineName) in Tumult Hype 1.5 and earlier.",
+		"scope": ""
+	},
+	"hypeDocument.pauseTimelineNamed('timelineName')": {
+		"prefix": "hypeDocument.pauseTimelineNamed('timelineName')",
+		"body": "hypeDocument.pauseTimelineNamed('${1:timelineName}')",
+		"description": "Pauses the specified timeline for the current scene.",
+		"scope": ""
+	},
+	"hypeDocument.continueTimelineNamed('timelineName', direction)": {
+		"prefix": "hypeDocument.continueTimelineNamed('timelineName', direction, canRestartTimeline)",
+		"body": "hypeDocument.continueTimelineNamed('${1:timelineName}', ${2|hypeDocument.kDirectionForward,hypeDocument.kDirectionReverse|}, ${3:trueOrFalse})",
+		"description": "An example that plays the Main Timeline of the current scene in the forward direction and will start the timeline over if the end has already been reached: hypeDocument.continueTimelineNamed('Main Timeline', hypeDocument.kDirectionForward, true)",
+		"scope": ""
+	},
+	"hypeDocument.goToTimeInTimelineNamed(timeInSeconds, 'timelineName')": {
+		"prefix": "hypeDocument.goToTimeInTimelineNamed(timeInSeconds, 'timelineName')",
+		"body": "hypeDocument.goToTimeInTimelineNamed('${1:timeInSeconds}, '{2:timelineName}')",
+		"description": "Jumps to a specific time in the specified timeline for the current scene.",
+		"scope": ""
+	},
+	"hypeDocument.currentTimeInTimelineNamed('timelineName')": {
+		"prefix": "hypeDocument.currentTimeInTimelineNamed('timelineName')",
+		"body": "hypeDocument.currentTimeInTimelineNamed('${1:timelineName}')",
+		"description": "Returns the current time of the specified timeline in seconds.",
+		"scope": ""
+	},
+	"hypeDocument.durationForTimelineNamed('timelineName')": {
+		"prefix": "hypeDocument.durationForTimelineNamed('timelineName')",
+		"body": "hypeDocument.durationForTimelineNamed('${1:timelineName}')",
+		"description": "Returns the duration of the specified timeline in seconds.",
+		"scope": ""
+	},
+	"hypeDocument.currentDirectionForTimelineNamed('timelineName')": {
+		"prefix": "hypeDocument.currentDirectionForTimelineNamed('timelineName')",
+		"body": "hypeDocument.currentDirectionForTimelineNamed('${1:timelineName}')",
+		"description": "Returns the playback direction of the specified timeline. Possible return values: hypeDocument.kDirectionForward hypeDocument.kDirectionReverse",
+		"scope": ""
+	},
+	"hypeDocument.isPlayingTimelineNamed('timelineName')": {
+		"prefix": "hypeDocument.isPlayingTimelineNamed('timelineName')",
+		"body": "hypeDocument.isPlayingTimelineNamed('${1:timelineName}')",
+		"description": "Returns true if the timeline is playing and false if it is not. Timeline names are user-defined and uniqueness is not enforced. If you are going to use these functions, be sure that no two timelines in any scene have the same name.",
+		"scope": ""
+	},
+	"hypeDocument.getSymbolInstanceById(id)": {
+		"prefix": "hypeDocument.getSymbolInstanceById(id)",
+		"body": "hypeDocument.getSymbolInstanceById(${1:id})",
+		"description": "Returns the symbolInstance for the symbol with the specified id. The symbol instance can be used to control timelines in the symbol. See the Symbol Instances section for more information.",
+		"scope": ""
+	},
+	"symbolInstance.getSymbolInstancesByName(symbolName)": {
+		"prefix": "symbolInstance.getSymbolInstancesByName(symbolName)",
+		"body": "symbolInstance.getSymbolInstancesByName(${1:symbolName})",
+		"description": "Returns all symbolInstances with the specified name. A symbol’s name can be found in the Symbol Library. The symbol instance can be used to control timelines in the symbol. See the Symbol Instances section for more information.",
+		"scope": ""
+	},
+	"symbolInstance.symbolName()": {
+		"prefix": "symbolInstance.symbolName()",
+		"body": "symbolInstance.symbolName()",
+		"description": "Returns the name of the symbol.",
+		"scope": ""
+	},
+	"symbolInstance.element()": {
+		"prefix": "symbolInstance.element()",
+		"body": "symbolInstance.element()",
+		"description": "Returns the name of the symbol.",
+		"scope": ""
+	},
+	"symbolInstance.startTimelineNamed(timelineName, direction)": {
+		"prefix": "symbolInstance.startTimelineNamed(timelineName, direction)",
+		"body": "symbolInstance.startTimelineNamed('${1:timelinename}', ${2|hypeDocument.kDirectionForward,hypeDocument.kDirectionReverse|})",
+		"description": "Starts the specified timeline at the beginning for the symbol. Note: timelines are user-defined, so they are not enforced to be unique. If you are going to use this function, be sure that no two timelines in the symbol have the same name! Direction to play timeline: hypeDocument.kDirectionForward hypeDocument.kDirectionReverse",
+		"scope": ""
+	},
+	"symbolInstance.pauseTimelineNamed('timelineName')": {
+		"prefix": "symbolInstance.pauseTimelineNamed('timelineName')",
+		"body": "symbolInstance.pauseTimelineNamed('${1:timelinename}')",
+		"description": "Pauses the specified timeline for the symbol. Note: timelines are user-defined, so they are not enforced to be unique. If you are going to use this function, be sure that no two timelines in the symbol have the same name!",
+		"scope": ""
+	},
+	"symbolInstance.continueTimelineNamed('timelineName')": {
+		"prefix": "symbolInstance.continueTimelineNamed('timelineName')",
+		"body": "symbolInstance.continueTimelineNamed('${1:timelinename}', ${2|hypeDocument.kDirectionForward,hypeDocument.kDirectionReverse|})",
+		"description": "Continues the specified timeline where it left off for the symbol. Note: timelines are user-defined, so they are not enforced to be unique. If you are going to use this function, be sure that no two timelines in the symbol have the same name! Direction to play timeline: hypeDocument.kDirectionForward hypeDocument.kDirectionReverse",
+		"scope": ""
+	},
+	{
+		"prefix": "symbolInstance.goToTimeInTimelineNamed(timeInSeconds, timelineName)",
+		"body": "symbolInstance.goToTimeInTimelineNamed(${1:timeInSeconds}, '${1:timelineName}')",
+		"description": "Jumps to a specific time in the specified timeline for the symbol. Note: timelines are user-defined, so they are not enforced to be unique. If you are going to use this function, be sure that no two timelines in the symbol have the same name!",
+		"scope": ""
+	},
+	{
+		"prefix": "symbolInstance.currentTimeInTimelineNamed(timelineName)",
+		"body": "symbolInstance.currentTimeInTimelineNamed($'{1:timelineName}')",
+		"description": "Returns the current time of the specified timeline in seconds.",
+		"scope": ""
+	},
+	{
+		"prefix": "symbolInstance.durationForTimelineNamed(timelineName)",
+		"body": "symbolInstance.durationForTimelineNamed($'{1:timelineName}')",
+		"description": "Returns the duration of the specified timeline in seconds.",
+		"scope": ""
+	},
+	{
+		"prefix": "symbolInstance.currentDirectionForTimelineNamed(timelineName)",
+		"body": "symbolInstance.currentDirectionForTimelineNamed($'{1:timelineName}')",
+		"description": "Returns the playback direction of the specified timeline.  hypeDocument.kDirectionForward hypeDocument.kDirectionReverse",
+		"scope": ""
+	},
+	{
+		"prefix": "symbolInstance.isPlayingTimelineNamed(timelineName)",
+		"body": "symbolInstance.isPlayingTimelineNamed$'{1:timelineName}'",
+		"description": "Returns true if the timeline is playing and false if it is not.",
+		"scope": ""
+	},
+	{
+		"prefix": "event['hypeGesturePhase']",
+		"body": "event['hypeGesturePhase']",
+		"description": "When receiving a callback for the On Drag event with the Run JavaScript… action the event object also offers information about whether the current drag gesture has just started or ended, was canceled, or the coordinates were updated. To get that state, access the hypeGesturePhase property in the event object: hypeDocument.kHypeGesturePhaseStart hypeDocument.kHypeGesturePhaseMove hypeDocument.kHypeGesturePhaseEnd hypeDocument.kHypeGesturePhaseCancel",
+		"scope": ""
+	},
+	{
+		"prefix": "event['hypeGestureXPosition']",
+		"body": "event['hypeGestureXPosition']",
+		"description": "Returns the current x position of a drag when using the 'On Drag' event with the 'Run JavaScript…' action. Using the X and Y position events above allows you to create draggable elements constrained within a defined area.",
+		"scope": ""
+	},
+	{
+		"prefix": "event['hypeGestureYPosition']",
+		"body": "event['hypeGestureYPosition']",
+		"description": "Returns the current y position of a drag when using the 'On Drag' event with the 'Run JavaScript…' action. Using the X and Y position events above allows you to create draggable elements constrained within a defined area.",
+		"scope": ""
+	}
