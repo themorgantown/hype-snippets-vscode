@@ -12,7 +12,9 @@ This extension contains all available JavaScript API functions present in Tumult
 
 ## Example Usage
 
-This extension is active when the editor's language is set to JavaScript. As you begin typing any Hype JS function name, you will see snippet recommendations near your cursor.  For example, type   `hypeDocument.showSc`, press the down arrow to select `hypeDocument.showSceneNamed`, and then insert `'My Scene'` and then press tab again to jump to the scene transitions, and tab again to select the optional duration for the scene transition. Press the `i` icon on each snippet for full documentation.
+This extension is active when the editor's language is set to JavaScript. As you begin typing any Hype JS function name, you will see snippet recommendations near your cursor.  For example, type   `hypeDocument.showSc`, press the down arrow to select `hypeDocument.showSceneNamed`, and then insert `'My Scene'` and then press **tab** again to jump to the scene transitions, and **tab** again to select the optional duration for the scene transition. Press the `i` icon on each snippet for full documentation.
+
+![Snippet Usage GIF Example](https://raw.githubusercontent.com/themorgantown/hype-snippets-vscode/master/images/example.gif "Snippet Usage GIF Example")
 
 ## Release Notes
 
