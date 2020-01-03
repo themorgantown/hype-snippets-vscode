@@ -268,4 +268,10 @@
 		"body": "event['hypeGestureYPosition']",
 		"description": "Returns the current y position of a drag when using the 'On Drag' event with the 'Run JavaScript…' action. Using the X and Y position events above allows you to create draggable elements constrained within a defined area.",
 		"scope": ""
+	},
+	"documentloadcallback": {
+		"prefix": "HypeDocumentLoad",
+		"body": ["function myCallback(hypeDocument, element, event) {", "  // Do something after HypeDocumentLoad", "}", "if ('HYPE_eventListeners' in window === false) {", "  window.HYPE_eventListeners = Array();", "}", "window.HYPE_eventListeners.push({", "  'type': 'HypeDocumentLoad',", "  'callback':myCallback", "});"],
+		"description": "Adds an event listener for running a function after the Hype document has loaded on the page. Only use this in the head HTML or outside of Hype's runtime.",
+		"scope": ""
 	}
