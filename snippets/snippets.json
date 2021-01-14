@@ -271,7 +271,8 @@
 	},
 	"documentloadcallback": {
 		"prefix": "HypeDocumentLoad",
-		"body": ["function myCallback(hypeDocument, element, event) {", "  // Do something after HypeDocumentLoad", "}", "if ('HYPE_eventListeners' in window === false) {", "  window.HYPE_eventListeners = Array();", "}", "window.HYPE_eventListeners.push({", "  'type': 'HypeDocumentLoad',", "  'callback':myCallback", "});"],
+		"body": ["function myCallback(hypeDocument, element, event) {", "  // Do something after HypeDocumentLoad. This snippet runs outside of the Hype Runtime", "}", "if ('HYPE_eventListeners' in window === false) {", "  window.HYPE_eventListeners = Array();", "}", "window.HYPE_eventListeners.push({", "  'type': 'HypeDocumentLoad',", "  'callback':myCallback", "});"],
 		"description": "Adds an event listener for running a function after the Hype document has loaded on the page. Only use this in the head HTML or outside of Hype's runtime.",
 		"scope": ""
 	}
+}
