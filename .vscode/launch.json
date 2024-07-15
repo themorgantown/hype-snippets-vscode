@@ -8,6 +8,15 @@
             "request": "launch",
             "runtimeExecutable": "${execPath}",
             "args": ["--extensionDevelopmentPath=${workspaceRoot}" ]
-        }
+        }, 
+        {
+            "name": "Run vsce package",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "vsce",
+            "args": ["package"],
+            "cwd": "${workspaceRoot}",
+            "console": "integratedTerminal"
+        },
     ]
 }
