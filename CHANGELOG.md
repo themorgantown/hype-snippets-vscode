@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.7
+- Typos fixed
+- Fix resourcesFolderName 
+- Smarter setelementproperty support
+
 ## 1.0.4
 Fix typo in `hypeDocument.goToTimeInTimelineNamed(timeInSeconds, 'timelineName')` and other snippets. 
 
