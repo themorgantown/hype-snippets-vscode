@@ -24,6 +24,6 @@
         "url": "https://github.com/themorgantown/hype-snippets-vscode"
     },
     "dependencies": {
-        "vsce": "^2.15.0"
+        "@vscode/vsce": "3.2.0"
     }
 }
