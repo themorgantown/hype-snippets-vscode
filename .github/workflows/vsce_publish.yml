@@ -7,10 +7,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.7
-      - run: npm install
-      - uses: lannonbr/vsce-action@3.0.0
+      - uses: actions/checkout@v4.2.1
+      - name: Use Node.js Latest
+        uses: actions/setup-node@v4.0.4
         with:
-          args: "publish -p $VSCE_TOKEN"
+          node-version: 'latest'
+      - run: npm install
+      - name: Publish to Visual Studio Marketplace
+        run: npx vsce publish -p ${{ secrets.VSCE_TOKEN }}
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
