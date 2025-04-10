@@ -185,6 +185,12 @@
 		"description": "Returns the symbolInstance for the symbol with the specified id. The symbol instance can be used to control timelines in the symbol. See the Symbol Instances section for more information.",
 		"scope": ""
 	},
+	"hypeDocument.getSymbolInstancesByName": {
+		"prefix": "hypeDocument.getSymbolInstancesByName",
+		"body": "hypeDocument.getSymbolInstancesByName('${1:symbolName}')",
+		"description": "Returns all symbolInstances with the specified name. A symbol's name can be found in the Symbol Library.",
+		"scope": ""
+	},
 	"symbolInstance.getSymbolInstancesByName(symbolName)": {
 		"prefix": "symbolInstance.getSymbolInstancesByName(symbolName)",
 		"body": "symbolInstance.getSymbolInstancesByName(${1:symbolName})",
@@ -273,6 +279,74 @@
 		"prefix": "HypeDocumentLoad",
 		"body": ["function myCallback(hypeDocument, element, event) {", "  // Do something after HypeDocumentLoad. This snippet runs outside of the Hype Runtime", "}", "if ('HYPE_eventListeners' in window === false) {", "  window.HYPE_eventListeners = Array();", "}", "window.HYPE_eventListeners.push({", "  'type': 'HypeDocumentLoad',", "  'callback':myCallback", "});"],
 		"description": "Adds an event listener for running a function after the Hype document has loaded on the page. Only use this in the head HTML or outside of Hype's runtime.",
+		"scope": ""
+	},
+	"hypeEventListeners": {
+		"prefix": "hypeEventTypes",
+		"body": [
+			"HypeDocumentLoad",
+			"HypeScenePrepareForDisplay",
+			"HypeSceneLoad",
+			"HypeSceneUnload",
+			"HypeSymbolLoad",
+			"HypeSymbolUnload",
+			"HypeResourceLoad",
+			"HypeLayoutRequest",
+			"HypeTimelineComplete",
+			"HypeTriggerCustomBehavior",
+			"HypeEnterViewport",
+			"HypeExitViewport"
+		],
+		"description": "Event types that can receive callbacks in Tumult Hype",
+		"scope": ""
+	},
+	"hypeEventListenerTemplate": {
+		"prefix": "hypeEventListener",
+		"body": [
+			"function ${1:callbackName}(hypeDocument, element, event) {",
+			"  // Your code here",
+			"  ${0}",
+			"}",
+			"",
+			"if('HYPE_eventListeners' in window === false) {",
+			"  window.HYPE_eventListeners = Array();",
+			"}",
+			"window.HYPE_eventListeners.push({",
+			"  'type': '${2|HypeDocumentLoad,HypeScenePrepareForDisplay,HypeSceneLoad,HypeSceneUnload,HypeSymbolLoad,HypeSymbolUnload,HypeResourceLoad,HypeLayoutRequest,HypeTimelineComplete,HypeTriggerCustomBehavior,HypeEnterViewport,HypeExitViewport|}',",
+			"  'callback': ${1:callbackName}",
+			"});"
+		],
+		"description": "Template for creating Hype event listeners",
+		"scope": ""
+	},
+	"hypePhysicsBodyTypes": {
+		"prefix": "hypePhysicsBodyTypes",
+		"body": [
+			"hypeDocument.kPhysicsBodyTypeDead",
+			"hypeDocument.kPhysicsBodyTypeStatic",
+			"hypeDocument.kPhysicsBodyTypeDynamic"
+		],
+		"description": "Constants for physics body types in Tumult Hype Professional",
+		"scope": ""
+	},
+	"hypeDirectionConstants": {
+		"prefix": "hypeDirectionConstants",
+		"body": [
+			"hypeDocument.kDirectionForward",
+			"hypeDocument.kDirectionReverse"
+		],
+		"description": "Direction constants for timeline playback",
+		"scope": ""
+	},
+	"hypeGesturePhases": {
+		"prefix": "hypeGesturePhases",
+		"body": [
+			"hypeDocument.kHypeGesturePhaseStart",
+			"hypeDocument.kHypeGesturePhaseMove",
+			"hypeDocument.kHypeGesturePhaseEnd",
+			"hypeDocument.kHypeGesturePhaseCancel"
+		],
+		"description": "Constants for gesture phases in the drag event",
 		"scope": ""
 	}
 }

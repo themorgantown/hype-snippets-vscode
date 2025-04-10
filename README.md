@@ -22,6 +22,17 @@ In VScode, as you begin typing any Hype JS function name, you will see snippet r
 
 ## Release Notes
 
+### 1.0.10
+
+Added several missing snippets:
+- Scene transition constants (kSceneTransition*)
+- External scene navigation snippets for HTML links outside Hype documents
+- Complete set of HYPE_eventListeners event types
+- Event listener template for all event types
+- Physics body type constants
+- Direction constants for timeline playback
+- Gesture phase constants
+
 ### 1.0.3
 
 Updated Hype Icon, improved instructions.
