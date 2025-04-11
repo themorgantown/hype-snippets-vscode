@@ -2,13 +2,13 @@
 	"resourcesFolderName": {
 		"prefix": "${resourcesFolderName",
 		"body": "\\${resourcesFolderName}",
-		"description": "Resources Folder Name.",
+		"description": "Returns the name of the resources folder for the Hype document. This is useful for referencing assets added via the Resource Library.",
 		"scope": ""
 	},
 	"hypeDocument.documentName": {
 		"prefix": "documentname",
 		"body": "hypeDocument.documentName(${1:elem})",
-		"description": "Hype Document Name",
+		"description": "Returns the name of the document. This value can be used in the global HYPE.documents[documentName].",
 		"scope": ""
 	},
 	"HYPE.documents[documentName]": {
@@ -20,13 +20,13 @@
 	"HYPE_eventListeners": {
 		"prefix": "HYPE_eventListeners",
 		"body": "HYPE_eventListeners",
-		"description": "",
+		"description": "Used to register callback functions for Hype events such as HypeDocumentLoad, HypeSceneLoad, etc.",
 		"scope": ""
 	},
 	"hypeDocument.documentId": {
 		"prefix": "documentId",
 		"body": "hypeDocument.documentId(${1:elem})",
-		"description": "Document Id",
+		"description": "Returns the id of the container div for the document. This value can be used with document.getElementById() to retrieve the container element itself.",
 		"scope": ""
 	},
 	"hypeDocument.resourcesFolderURL": {
@@ -56,7 +56,7 @@
 	"hypeDocument.getElementProperty(element, propertyName)": {
 		"prefix": "hypeDocument.getElementProperty",
 		"body": "hypeDocument.getElementProperty(${1:elem}, ${2:elem})",
-		"description": "Gets a property of an element based on the Hype runtime's knowledge. The element argument must be a DOM element, generally obtained by the hypeDocument.getElementById() function. Valid property names (quotes required): 'top''left''width''height''rotateZ''scaleX''scaleY''opacity' 'z-index' Physics property names (Hype Professional): 'physics-engine' - a Matter.js (http://brm.io/matter-js) Engine object 'physics-body' - a Matter.js (http://brm.io/matter-js) Body object 'physics-bounce' 'physics-friction''physics-air-drag''physics-density''physics-body-type' - Can be hypeDocument.kPhysicsBodyTypeDead, hypeDocument.kPhysicsBodyTypeStatic, or hypeDocument.kPhysicsBodyTypeDynamic ",
+		"description": "Gets a property of an element based on the Hype runtime's knowledge. Valid properties include: 'top', 'left', 'width', 'height', 'rotateZ', 'scaleX', 'scaleY', 'opacity', 'z-index', 'physics-engine', 'physics-body', 'physics-bounce', 'physics-friction', 'physics-air-drag', 'physics-density', 'physics-body-type'.",
 		"scope": ""
 	},
 	"hypeDocument.setElementProperty(element, propertyName)": {
@@ -134,7 +134,7 @@
 	"hypeDocument.startTimelineNamed('timelineName', direction)": {
 		"prefix": "hypeDocument.startTimelineNamed('timelineName', direction)",
 		"body": "hypeDocument.startTimelineNamed('${1:timelineName}', ${2|hypeDocument.kDirectionForward,hypeDocument.kDirectionReverse|})",
-		"description": "Note: this function was named hypeDocument.playTimelineNamed(timelineName) in Tumult Hype 1.5 and earlier.",
+		"description": "Starts the specified timeline at the beginning for the current scene. Note: was named hypeDocument.playTimelineNamed() in version 1.5 and earlier.",
 		"scope": ""
 	},
 	"hypeDocument.pauseTimelineNamed('timelineName')": {
@@ -146,7 +146,7 @@
 	"hypeDocument.continueTimelineNamed('timelineName', direction)": {
 		"prefix": "hypeDocument.continueTimelineNamed('timelineName', direction, canRestartTimeline)",
 		"body": "hypeDocument.continueTimelineNamed('${1:timelineName}', ${2|hypeDocument.kDirectionForward,hypeDocument.kDirectionReverse|}, ${3:trueOrFalse})",
-		"description": "An example that plays the Main Timeline of the current scene in the forward direction and will start the timeline over if the end has already been reached: hypeDocument.continueTimelineNamed('Main Timeline', hypeDocument.kDirectionForward, true)",
+		"description": "Continues the specified timeline where it left off for the current scene. Pass true for canRestartTimeline to allow restarting the timeline if it's at the end.",
 		"scope": ""
 	},
 	"hypeDocument.goToTimeInTimelineNamed(timeInSeconds, 'timelineName')": {
@@ -212,7 +212,7 @@
 	"symbolInstance.startTimelineNamed(timelineName, direction)": {
 		"prefix": "symbolInstance.startTimelineNamed(timelineName, direction)",
 		"body": "symbolInstance.startTimelineNamed('${1:timelinename}', ${2|hypeDocument.kDirectionForward,hypeDocument.kDirectionReverse|})",
-		"description": "Starts the specified timeline at the beginning for the symbol. Note: timelines are user-defined, so they are not enforced to be unique. If you are going to use this function, be sure that no two timelines in the symbol have the same name! Direction to play timeline: hypeDocument.kDirectionForward hypeDocument.kDirectionReverse",
+		"description": "Starts the specified timeline at the beginning for the symbol. Note: timelines are user-defined, so they are not enforced to be unique.",
 		"scope": ""
 	},
 	"symbolInstance.pauseTimelineNamed('timelineName')": {
@@ -224,7 +224,7 @@
 	"symbolInstance.continueTimelineNamed('timelineName')": {
 		"prefix": "symbolInstance.continueTimelineNamed('timelineName')",
 		"body": "symbolInstance.continueTimelineNamed('${1:timelinename}', ${2|hypeDocument.kDirectionForward,hypeDocument.kDirectionReverse|})",
-		"description": "Continues the specified timeline where it left off for the symbol. Note: timelines are user-defined, so they are not enforced to be unique. If you are going to use this function, be sure that no two timelines in the symbol have the same name! Direction to play timeline: hypeDocument.kDirectionForward hypeDocument.kDirectionReverse",
+		"description": "Continues the specified timeline where it left off for the symbol. Pass true for canRestartTimeline to allow restarting the timeline if it's at the end. Note: timelines are user-defined, so they are not enforced to be unique. If you are going to use this function, be sure that no two timelines in the symbol have the same name! Direction to play timeline: hypeDocument.kDirectionForward hypeDocument.kDirectionReverse",
 		"scope": ""
 	},
 	"symbolInstance.goToTimeInTimelineNamed(timeInSeconds, timelineName)": {
@@ -260,7 +260,7 @@
 	"event['hypeGesturePhase']": {
 		"prefix": "event['hypeGesturePhase']",
 		"body": "event['hypeGesturePhase']",
-		"description": "When receiving a callback for the On Drag event with the Run JavaScript… action the event object also offers information about whether the current drag gesture has just started or ended, was canceled, or the coordinates were updated. To get that state, access the hypeGesturePhase property in the event object: hypeDocument.kHypeGesturePhaseStart hypeDocument.kHypeGesturePhaseMove hypeDocument.kHypeGesturePhaseEnd hypeDocument.kHypeGesturePhaseCancel",
+		"description": "In On Drag event callbacks, returns the current phase of the gesture: kHypeGesturePhaseStart, kHypeGesturePhaseMove, kHypeGesturePhaseEnd, or kHypeGesturePhaseCancel.",
 		"scope": ""
 	},
 	"event['hypeGestureXPosition']": {
