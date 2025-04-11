@@ -2,14 +2,16 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'package.json'
 name: Deploy Extension
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.2.1
+      - uses: actions/checkout@v4.2.2
       - name: Use Node.js Latest
-        uses: actions/setup-node@v4.0.4
+        uses: actions/setup-node@v4.3.0
         with:
           node-version: 'latest'
       - run: npm install
