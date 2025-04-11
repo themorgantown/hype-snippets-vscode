@@ -22,7 +22,7 @@ In VScode, as you begin typing any Hype JS function name, you will see snippet r
 
 ## Release Notes
 
-### 1.0.10
+### 1.0.11
 
 Added several missing snippets:
 - Scene transition constants (kSceneTransition*)
