@@ -2,7 +2,7 @@
     "name": "tumult-hype-snippets",
     "displayName": "Tumult Hype Code Snippets",
     "description": "Helpful snippets for Tumult Hype JavaScript API functions.",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "publisher": "tumult",
     "icon": "images/hype.png",
     "engines": {

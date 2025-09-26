@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.12
+
+Package update.
+
 ## 1.0.11
 
 Add missing snippets: 
