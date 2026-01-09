@@ -4,6 +4,7 @@ on:
       - master
     paths:
       - 'package.json'
+  workflow_dispatch:
 name: Deploy Extension (Open VSX)
 jobs:
   deploy:
