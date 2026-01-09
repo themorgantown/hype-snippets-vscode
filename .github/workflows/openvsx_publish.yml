@@ -1,0 +1,29 @@
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'package.json'
+name: Deploy Extension (Open VSX)
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5.0.0
+
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v5.0.0
+        with:
+          node-version: 'lts/*'
+
+      - name: Set publisher to themorgantown to workaround namescape issue in open-vsx
+        run: |
+          node -e "const fs=require('fs'); const p='package.json'; const pkg=JSON.parse(fs.readFileSync(p,'utf8')); pkg.publisher='themorgantown'; fs.writeFileSync(p, JSON.stringify(pkg, null, 2) + '\n'); console.log('publisher set to', pkg.publisher);"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish to Open VSX
+        run: npx ovsx publish -p "$OVSX_TOKEN"
+        env:
+          OVSX_TOKEN: ${{ secrets.OPEN_VSX_TOKEN || secrets['open-vsx-token'] }}
